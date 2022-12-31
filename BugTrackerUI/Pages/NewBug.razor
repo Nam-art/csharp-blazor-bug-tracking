@@ -10,7 +10,9 @@
 </EditForm>
 
 @code {
-	public Bug AddBug { get; set; }
+	public Bug AddBug{ get { return newBug;} }
+
+	public Bug newBug = new Bug();
 
 	[Inject]
 	public IBugService BugService { get; set; }
